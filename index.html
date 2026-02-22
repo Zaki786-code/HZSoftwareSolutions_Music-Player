@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="music-player-container">
+        <div class="album-art" id="albumArt">
+            <img src="" alt="Album Art" id="albumImage">
+        </div>
+
+        <div class="song-info">
+            <div class="song-title" id="songTitle">Loading...</div>
+            <div class="song-artist" id="songArtist">Artist Name</div>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <div class="time-container">
+                <span id="currentTime">0:00</span>
+                <span id="duration">0:00</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="control-btn" id="shuffleBtn" title="Shuffle">
+                <i class="fas fa-random"></i>
+            </button>
+            <button class="control-btn" id="prevBtn" title="Previous">
+                <i class="fas fa-step-backward"></i>
+            </button>
+            <button class="control-btn play-pause-btn" id="playPauseBtn" title="Play/Pause">
+                <i class="fas fa-play" id="playPauseIcon"></i>
+            </button>
+            <button class="control-btn" id="nextBtn" title="Next">
+                <i class="fas fa-step-forward"></i>
+            </button>
+            <button class="control-btn" id="repeatBtn" title="Repeat">
+                <i class="fas fa-redo"></i>
+            </button>
+        </div>
+
+        <div class="volume-container">
+            <i class="fas fa-volume-up"></i>
+            <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="70">
+            <span id="volumeValue">70%</span>
+        </div>
+
+        <div class="playlist-container" id="playlistContainer">
+            <!-- Playlist items will be added dynamically -->
+        </div>
+
+        <div class="autoplay-toggle">
+            <span>Autoplay</span>
+            <div class="toggle-switch" id="autoplayToggle">
+                <div class="toggle-slider"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="notification" id="notification"></div>
+
+    <audio id="audioPlayer"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
